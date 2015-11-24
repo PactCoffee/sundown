@@ -8,6 +8,24 @@
   "defaultLocale": "en",
   "private": true,
   "location": "ticket_sidebar",
-  "version": "1.0",
-  "frameworkVersion": "1.0"
+  "version": "1.0.0",
+  "frameworkVersion": "1.0",
+  "domainWhitelist": [
+    "{{setting 'api_url'}}"
+  ],
+  "parameters": [
+    {
+      "name": "api_url",
+      "type": "text",
+      "required": true,
+      "default": "http://4a38f0f1.ngrok.com"
+    },
+    {
+      "name": "viper_token",
+      "type": "text",
+      "required": true,
+      "secure": true,
+      "default": "df06bea8-ba9e-456e-8896-1d2290bdd373"
+    }
+  ]
 }

@@ -1,14 +1,8 @@
-# App name
+# Sundown
 
-[brief description of the app]
+Sundown is a Zendesk App which looks up the ticket requester's email in Viper.
 
-### The following information is displayed:
-
-* info1
-* info2
-* info3
-
-Please submit bug reports to [Insert Link](). Pull requests are welcome.
-
-### Screenshot(s):
-[put your screenshots down here.]
+### Changelog
+#### 1.0.0
+* Display's the user's first and last name as a link to user's page the Viper Admin System
+* Add PactCoffee icons
