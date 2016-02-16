@@ -21,11 +21,10 @@
       "default": "http://4a38f0f1.ngrok.com"
     },
     {
-      "name": "viper_token",
+      "name": "admin_url",
       "type": "text",
       "required": true,
-      "secure": true,
-      "default": "df06bea8-ba9e-456e-8896-1d2290bdd373"
+      "default": "https://api.pactcoffee.com/admin"
     }
   ]
 }
