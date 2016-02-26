@@ -1,11 +1,7 @@
-{{#if id}}
-  <a href="{{setting 'api_url'}}/admin/users/{{id}}" target="_blank">
-   {{first_name}} {{last_name}}
+{{#if user}}
+  <a href="{{setting 'admin_url'}}/users/{{user.id}}" target="_blank">
+   {{user.first_name}} {{user.last_name}}
   </a>
 {{else}}
-  {{#if error}}
-    <p>Bad request</p>
-  {{else}}
-    <p>Sorry, we couldn't find a user with this email</p>
-    {{/if}}
+  <p>Uh oh, something went wrong<p>
 {{/if}}

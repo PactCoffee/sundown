@@ -8,31 +8,26 @@
     },
 
     requests: {
-      findUser: function(email) {
+      findUser: function(userId) {
         return {
-          url: this.setting('api_url') + "/v1/users",
-          username: this.setting('viper_token'),
-          password: "", //required for basic auth
+          url: this.setting('api_url') + '/users/' + userId,
           type: 'GET',
-          dataType: 'json',
-          data: {
-            email: email
-          }
+          dataType: 'json'
         };
       }
     },
 
     initialize: function() {
-      var email = this.ticket().requester().email();
-      this.ajax('findUser', email);
+      var userId  = this.ticket().requester().id();
+      this.ajax('findUser', userId);
     },
 
     success: function(request) {
-      this.switchTo('admin_link', request.users[0]);
+      this.switchTo('admin_link', request);
     },
 
     fail: function(request) {
-      this.switchTo('admin_link', { error: true } );
+      this.switchTo('error');
     }
   };
 
