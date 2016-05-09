@@ -1,5 +1,5 @@
-.app-view {
-  background-color: #edeff0;
+.side-box-content, .blue_box_top, .blue_box_bottom, .side-box-with-image, .r_blue {
+  background-color: blue;
 }
 
 h1 { font-size: 2em;}
@@ -78,4 +78,22 @@ dd {
 .button-group a {
   color: #5fb7b1;
   font-weight: bold;
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.5em 1.25em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #5fb7b1;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+.cta:hover {
+  background-color: #4C948F;
 }

@@ -1,3 +1,15 @@
+<span class="actions">
+  <a class="cta" href="{{setting 'admin_url'}}/user_vouchers/new?user_id={{
+  user.id}}" target="_blank">
+    Add voucher
+  </a>
+
+  <a class="cta" href="{{setting 'admin_url'}}/orders/new?user_id={{
+  user.id}}" target="_blank">
+    Add voucher
+  </a>
+</span>
+
 <h2>
   <a href="{{setting 'admin_url'}}/users/{{user.id}}" target="_blank">
     {{user.first_name}} {{user.last_name}}
