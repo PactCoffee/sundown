@@ -3,7 +3,6 @@
   return {
     events: {
       'app.activated':'initialize',
-      'findUser.done' : 'this.success',
       'findUser.fail' : 'this.fail',
     },
 
@@ -19,11 +18,10 @@
 
     initialize: function() {
       var userId  = this.ticket().requester().id();
-      this.ajax('findUser', userId);
-    },
-
-    success: function(request) {
-      this.switchTo('admin_link', request);
+      this.ajax('findUser', userId)
+          .done(function(data) {
+            this.switchTo('admin_link', data);
+          });
     },
 
     fail: function(request) {

@@ -1,7 +1,60 @@
-{{#if user}}
+<h2>
   <a href="{{setting 'admin_url'}}/users/{{user.id}}" target="_blank">
-   {{user.first_name}} {{user.last_name}}
+    {{user.first_name}} {{user.last_name}}
   </a>
-{{else}}
-  <p>Uh oh, something went wrong<p>
-{{/if}}
+</h2>
+<dl>
+  <dt>Phone number</dt>
+  <dd>{{user.phone_number}}</dd>
+  <dt>Email</dt>
+  <dd>{{user.email}}</dd>
+  <dt>Balance</dt>
+  <dd>£{{user.balance}}</dd>
+  <dt>Signup voucher</dt>
+  <dd>{{user.signup_voucher_code}}</dd>
+  <dt>Activated on</dt>
+  <dd>{{user.activated_on}}</dd>
+</dl>
+
+
+<hr>
+<h2>Addresses</h2>
+<ul>
+  {{#each user.addresses}}
+  <li>
+    <a target="_blank" href="{{setting 'admin_url'}}/orders/{{id}}">
+      {{.}}
+    </a>
+  </li>
+  {{/each}}
+</ul>
+
+<hr>
+<h2>Orders</h2>
+{{#each user.orders}}
+  <div class="panel">
+    <div class="recurrable-bar {{preparation}}">
+      <span class="img">
+        <img src="{{assetURL preparation}}.png" alt="{{preparation}} brew method icon">
+      </span>
+      <div class="bd">
+        <p>
+          <span class="address">{{address_line_1}}</span>
+          <br>
+          Dispatch on:&nbsp;{{dispatch_on}}
+
+        </p>
+      </div>
+    </div>
+    <ul class="order-items">
+      {{#each items}}
+        <li class="order-item">{{.}}</li>
+      {{/each}}
+    </ul>
+    <div class="button-group">
+      <a href="{{setting 'admin_url'}}/orders/{{id}}" target="_blank">
+        View in admin &gt;
+      </a>
+    </div>
+  </div>
+{{/each}}
