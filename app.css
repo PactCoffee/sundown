@@ -1,0 +1,99 @@
+.side-box-content, .blue_box_top, .blue_box_bottom, .side-box-with-image, .r_blue {
+  background-color: blue;
+}
+
+h1 { font-size: 2em;}
+h2 { font-size: 1.8em;}
+
+dd {
+  margin-left: 0.5em;
+}
+
+.orders-list {
+  margin: 0;
+}
+
+.panel {
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  margin-bottom: 1em;
+}
+
+/* order states */
+.created {
+  color: #29ae9b;
+}
+.billed {
+  color: #ff941c;
+}
+.shipped {
+  color: #80b0d3;
+}
+
+
+/*.recurrable-bar{
+  padding: 0.5em;
+  height: 50px;
+}*/
+.recurrable-bar .address {
+  font-weight: bold;
+}
+.preparation {
+  /*width: 50px;*/
+  /*float: left;*/
+  /*margin: 0 0.4rem;*/
+}
+.order-items {
+  padding: 1em;
+  margin: 0;
+  font-weight: bold;
+}
+.order-item {
+  margin-bottom: 0.7em;
+}
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.recurrable-bar {padding: 0.5em;}
+.recurrable-bar, .bd {overflow:hidden; _overflow:visible; zoom:1; padding-top: 0.35em;}
+.recurrable-bar .img {float:left; margin-right: 10px;}
+.recurrable-bar .img img{display:block;}
+.recurrable-bar .imgExt{float:right; margin-left: 10px;}
+.recurrable-bar.drip {border-bottom: solid 2px #fdb452;}
+.recurrable-bar.aeropress { border-bottom: solid 2px #b35b3c; }
+.recurrable-bar.cafetiere { border-bottom: solid 2px #5fb7b1; }
+.recurrable-bar.stovetop { border-bottom: solid 2px #61284f; }
+.recurrable-bar.espresso { border-bottom: solid 2px #b18979; }
+.recurrable-bar.wholebean {border-bottom: solid 2px #7f392e;}
+.recurrable-bar.pod-long { border-bottom: solid 2px #e18533; }
+.recurrable-bar.pod-mixed { border-bottom: solid 2px #5f5148; }
+.recurrable-bar.pod-short { border-bottom: solid 2px #5f504e; }
+
+.button-group {
+  padding: 1em 1.5em;
+  text-align: center;
+  border-top: solid 1px #e1e1e1;
+}
+.button-group a {
+  color: #5fb7b1;
+  font-weight: bold;
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.5em 1.25em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #5fb7b1;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+.cta:hover {
+  background-color: #4C948F;
+}

@@ -37,15 +37,19 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 ## Uploading the App
 * Increase the version number according to semver.
 * Add to the change log (below)
-* Run `zat package` to build the app (this creates a ZIP file)
-* Commit the above into Master
-* Upload the zip file when promopted on [Zendesk](pactcoffee.zendesk.com/agent/admin/apps/manage)
-* Enter in the API url
-* Enter in Zendesk's token*
+* Run `zat update` to build the app*
 
-*_To get the token run `rake viper:system_users:grindhouse`
+*_The current config is set to update the test app. Swap the id to the production app to update the production version._
+
+*Production App ID:* 75162
+*Production App ID:* 80833
 
 ## Changelog
+### 2.0.0
+* Display the more of the user's account information such as addresses and orders.
+* Add a button which links to the add voucher form for that user.
+* Add a button which links to the add adhoc order form for that user.
+
 ### 1.0.0
 * Display's the user's first and last name as a link to user's page the Viper Admin System
 * Add PactCoffee icons
