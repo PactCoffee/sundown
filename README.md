@@ -41,7 +41,7 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 *_The current config is set to update the test app. Swap the id to the production app to update the production version._
 
 *Production App ID:* 75162
-*Production App ID:* 80833
+*Test App ID:* 80833
 
 ## Changelog
 ### 2.0.0
