@@ -41,7 +41,8 @@
 </ul>
 
 <hr>
-<h2>Orders</h2>
+<h2>Orders ({{user.orders.length}})</h2>
+
 {{#each user.orders}}
   <div class="panel">
     <div class="recurrable-bar {{preparation}}">
