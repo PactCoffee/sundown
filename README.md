@@ -44,6 +44,9 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 *Test App ID:* 80833
 
 ## Changelog
+### 2.1.0
+* Display the total number of orders. This does not distinguish between created, billed, shipped and cancelled.
+
 ### 2.0.0
 * Display the more of the user's account information such as addresses and orders.
 * Add a button which links to the add voucher form for that user.
