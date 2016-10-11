@@ -45,16 +45,12 @@
 
 {{#each user.orders}}
   <div class="panel">
-    <div class="recurrable-bar {{preparation}}">
-      <span class="img">
-        <img src="{{assetURL preparation}}.png" alt="{{preparation}} brew method icon">
-      </span>
+    <div class="recurrable-bar">
       <div class="bd">
         <p>
           <span class="address">{{address_line_1}}</span>
           <br>
           Dispatch on:&nbsp;{{dispatch_on}}
-
         </p>
       </div>
     </div>
