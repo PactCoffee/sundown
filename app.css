@@ -55,20 +55,11 @@ dd {
   margin-bottom: 0;
 }
 
-.recurrable-bar {padding: 0.5em;}
+.recurrable-bar {
+  padding: 0.5em;
+  border-bottom: solid 2px #697D8B;
+}
 .recurrable-bar, .bd {overflow:hidden; _overflow:visible; zoom:1; padding-top: 0.35em;}
-.recurrable-bar .img {float:left; margin-right: 10px;}
-.recurrable-bar .img img{display:block;}
-.recurrable-bar .imgExt{float:right; margin-left: 10px;}
-.recurrable-bar.drip {border-bottom: solid 2px #fdb452;}
-.recurrable-bar.aeropress { border-bottom: solid 2px #b35b3c; }
-.recurrable-bar.cafetiere { border-bottom: solid 2px #5fb7b1; }
-.recurrable-bar.stovetop { border-bottom: solid 2px #61284f; }
-.recurrable-bar.espresso { border-bottom: solid 2px #b18979; }
-.recurrable-bar.wholebean {border-bottom: solid 2px #7f392e;}
-.recurrable-bar.pod-long { border-bottom: solid 2px #e18533; }
-.recurrable-bar.pod-mixed { border-bottom: solid 2px #5f5148; }
-.recurrable-bar.pod-short { border-bottom: solid 2px #5f504e; }
 
 .button-group {
   padding: 1em 1.5em;
