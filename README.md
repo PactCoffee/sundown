@@ -45,6 +45,9 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 
 ## Changelog
 ### 2.1.0
+* Remove preparation and grind from orders since Viper no longer has them on the order.
+
+### 2.1.0
 * Display the total number of orders. This does not distinguish between created, billed, shipped and cancelled.
 
 ### 2.0.0
