@@ -11,7 +11,11 @@
         return {
           url: this.setting('api_url') + '/users/' + userId,
           type: 'GET',
-          dataType: 'json'
+          dataType: 'json',
+          cors: true,
+          xhrFields: {
+            withCredentials: true,
+          },
         };
       }
     },
