@@ -17,7 +17,7 @@ Sundown is a Zendesk App which looks up the ticket requester's email in Viper.
 
 **Within Sundown folder**
 * Start the Zendesk App Server `zat server`*
-* Set the `API_URL` to the ngrok address 
+* Set the `API_URL` to the ngrok address
 * Set the `ADMIN_URL` to your local rails server address
 
 *_You can run `zat validate` before hand to lint the app. The app will not package unless it lints successfully._
@@ -27,7 +27,7 @@ Sundown is a Zendesk App which looks up the ticket requester's email in Viper.
 
 *_Make sure you click the shield in the address bar and allow unsafe scripts_
 
-Refreshing the page will reload the data from the API, refreshing the app using the reload icon will just reload the app with the existing data. 
+Refreshing the page will reload the data from the API, refreshing the app using the reload icon will just reload the app with the existing data.
 
 ### Documentation
 * [Zendesk App Tool](https://developer.zendesk.com/apps/docs/agent/tools)
@@ -44,6 +44,9 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 *Test App ID:* 80833
 
 ## Changelog
+### 2.3.0
+* Use CORS to make requests
+
 ### 2.2.0
 * Remove preparation and grind from orders since Viper no longer has them on the order.
 
