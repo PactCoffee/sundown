@@ -4,8 +4,13 @@ Sundown is a Zendesk App which looks up the ticket requester's email in Viper.
 
 ## Local Development
 ### Dependencies
-* Ngrok `gem install ngrok`
-* Zendesk App Tools `gem install zendesk_apps_tools`
+* [ngrok](https://ngrok.com/)
+* [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools) - just `bundle install`
+* (See .tool-versions for asdf ruby and nodejs versions currently in use. **Note:** You may need to `asdf reshim`)
+
+### V1 to V2 migration
+Sundown was origianlly written for Zendesk App Framework V1. Migrating it to V2 entailled following Zendesks'
+[migration guide](https://developer.zendesk.com/apps/docs/developer-guide/migrating)
 
 ### Developing
 **From within rails app folder for Viper**
