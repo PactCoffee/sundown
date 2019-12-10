@@ -1,3 +1,23 @@
+$(function() {
+  var client = ZAFClient.init();
+
+  client.get('ticket.requester.id').then(function(data) {
+    console.log(data['ticket.requester.id']); // something like 29043265
+  });
+
+  client.invoke('resize', { width: '100%', height: '120px' });
+
+  client.get('ticket.requester.id').then(
+    function(data) {
+      var user_id = data['ticket.requester.id'];
+      console.log("PASSO AQUI!!!!!!!!!!!!!");
+      // requestUserInfo(client, user_id);
+    }
+  );
+
+});
+
+/*
 (function() {
 
   return {
@@ -34,3 +54,4 @@
   };
 
 }());
+*/

@@ -1,5 +1,5 @@
 {
-  "name": "Sundown",
+  "name": "PactCoffee: Sundown v3.0.0",
   "author": {
     "name": "PactCoffee",
     "email": "dev@pactcoffee.com",
@@ -28,7 +28,7 @@
       "name": "admin_url",
       "type": "text",
       "required": true,
-      "default": "https://api.pactcoffee.com/admin"
+      "default": "https://api.pactcoffee.com/pact_admin"
     }
   ]
 }
