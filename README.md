@@ -1,27 +1,42 @@
 # Sundown
 
-Sundown is a Zendesk App which looks up the ticket requester's email in Viper.
+A Zendesk App which looks up the ticket requester's email in Viper.
 
 ## Local Development
-### Dependencies
+
+### Description
+
+Technically, Sundown is a Zendesk _iframe_ App (start [here](https://develop.zendesk.com/hc/en-us/articles/360001075048)).
+
+An _iframe_ app can be hosted in Zendesk Support or on a remote server. In our case we'll host our app in
+Zendesk Support, meaning that the application is packaged (zipped) and deployed as a
+[Zendesk Private App](https://pactcoffee.zendesk.com/agent/admin/apps/manage)
+
+Sundown displays user information on a side panel within the Zendesk UI (browser):
+* A link do the user's page on Admin and two buttons that link to Admin's "apply voucher" and "create ad-hoc order" functions.
+* The user's list of addresses (also clickable)
+* The list of user's orders
+
+This information is pulled from Viper API (currently api.pactcoffee.com/v1):
+* see [Viper's Zendesk webhook](https://github.com/PactCoffee/viper/blob/master/app/api/v1/webhooks/zendesk.rb).
+
+### Developing
+
+#### Dependencies
+
 * [ngrok](https://ngrok.com/)
 * [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools) - just `bundle install`
 * (See .tool-versions for asdf ruby and nodejs versions currently in use. **Note:** You may need to `asdf reshim`)
 
-### V1 to V2 migration
-Sundown was origianlly written for Zendesk App Framework V1. Migrating it to V2 entailled following Zendesks'
-[migration guide](https://developer.zendesk.com/apps/docs/developer-guide/migrating)
-
-### Developing
 **From within rails app folder for Viper**
 * Set the following environment variables `ZENDESK_API_URL`, `ZENDESK_USERNAME`, `ZENDESK_TOKEN`*.
-* Run the main rails app (Viper) locally `rails s -b ::`
-* Run ngrok `ngrok [rails app port number]` and make a note of the ngrok address
+* Run the main rails app (Viper) locally `bundle exec rails s`
+* Run ngrok `ngrok http [rails app port number]` and make a note of the ngrok address
 
-*_You can find the environment varaible values in Viper's Heroku config._
+*_You can find the environment varaible values in Viper's Heroku settings._
 
 **Within Sundown folder**
-* Start the Zendesk App Server `zat server`*
+* Start the Zendesk App Server: `zat server`
 * Set the `API_URL` to the ngrok address
 * Set the `ADMIN_URL` to your local rails server address
 
@@ -35,8 +50,7 @@ Sundown was origianlly written for Zendesk App Framework V1. Migrating it to V2 
 Refreshing the page will reload the data from the API, refreshing the app using the reload icon will just reload the app with the existing data.
 
 ### Documentation
-* [Zendesk App Tool](https://developer.zendesk.com/apps/docs/agent/tools)
-* [Zendesk Agent App](https://developer.zendesk.com/apps/docs/agent/introduction)
+* [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools) - just `bundle install`
 
 ## Uploading the App
 * Increase the version number according to semver.
@@ -49,6 +63,10 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 *Test App ID:* 80833
 
 ## Changelog
+
+### 3.0.0
+* Upgrade to Zendesk App Framework v2
+
 ### 2.3.0
 * Use CORS to make requests
 
