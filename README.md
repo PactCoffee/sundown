@@ -10,7 +10,9 @@ Technically, Sundown is a Zendesk _iframe_ App (start [here](https://develop.zen
 
 An _iframe_ app can be hosted in Zendesk Support or on a remote server. In our case we'll host our app in
 Zendesk Support, meaning that the application is packaged (zipped) and deployed as a
-[Zendesk Private App](https://pactcoffee.zendesk.com/agent/admin/apps/manage)
+[Zendesk Private App](https://pactcoffee.zendesk.com/agent/admin/apps/manage).
+
+See also how to [build your first Support app](https://develop.zendesk.com/hc/en-us/articles/360001074788).
 
 Sundown displays user information on a side panel within the Zendesk UI (browser):
 * A link do the user's page on Admin and two buttons that link to Admin's "apply voucher" and "create ad-hoc order" functions.
@@ -24,8 +26,8 @@ This information is pulled from Viper API (currently api.pactcoffee.com/v1):
 
 #### Dependencies
 
-* [ngrok](https://ngrok.com/)
-* [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools) - just `bundle install`
+* Install [ngrok](https://ngrok.com/)
+* Install [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048) - just `bundle install`
 * (See .tool-versions for asdf ruby and nodejs versions currently in use. **Note:** You may need to `asdf reshim`)
 
 **From within rails app folder for Viper**
@@ -40,17 +42,17 @@ This information is pulled from Viper API (currently api.pactcoffee.com/v1):
 * Set the `API_URL` to the ngrok address
 * Set the `ADMIN_URL` to your local rails server address
 
-*_You can run `zat validate` before hand to lint the app. The app will not package unless it lints successfully._
+*_You can run `zat validate` before hand to lint the app. The app will not package unless it lints successfully._*
 
 **In the browser**
-* [Pact Coffee's Zendesk](pactcoffee.zendesk.com/agent?zat=true)*
+* [Pact Coffee's Zendesk](https://pactcoffee.zendesk.com/agent?zat=true)
 
-*_Make sure you click the shield in the address bar and allow unsafe scripts_
+*_Make sure you click the shield in the address bar and allow unsafe scripts_*
 
 Refreshing the page will reload the data from the API, refreshing the app using the reload icon will just reload the app with the existing data.
 
 ### Documentation
-* [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools) - just `bundle install`
+* [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools)
 
 ## Uploading the App
 * Increase the version number according to semver.
