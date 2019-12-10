@@ -52,6 +52,10 @@ This information is pulled from Viper API (currently api.pactcoffee.com/v1):
 
 Refreshing the page will reload the data from the API, refreshing the app using the reload icon will just reload the app with the existing data.
 
+### Assets
+
+[Logo Dimensions](https://develop.zendesk.com/hc/en-us/articles/360001074808#topic_svk_qmc_2l)
+
 ### Documentation
 * [Zendesk App Tools](https://develop.zendesk.com/hc/en-us/articles/360001075048-Installing-and-using-the-Zendesk-apps-tools)
 
