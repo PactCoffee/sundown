@@ -1,5 +1,5 @@
 {
-  "name": "PactCoffee: Sundown v3.0.0",
+  "name": "PactCoffee Sundown v3",
   "author": {
     "name": "PactCoffee",
     "email": "dev@pactcoffee.com",
@@ -14,15 +14,13 @@
   },
   "version": "3.0.0",
   "frameworkVersion": "2.0",
-  "domainWhitelist": [
-    "{{setting 'api_url'}}"
-  ],
+  "domainWhitelist": ["{{setting.api_url}}"],
   "parameters": [
     {
       "name": "api_url",
       "type": "text",
       "required": true,
-      "default": "http://4a38f0f1.ngrok.com"
+      "default": "https://api.pactcoffee.com/v1/webhooks/zendesk"
     },
     {
       "name": "admin_url",
