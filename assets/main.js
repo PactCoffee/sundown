@@ -1,21 +1,43 @@
 $(function() {
   var client = ZAFClient.init();
 
-  client.get('ticket.requester.id').then(function(data) {
-    console.log(data['ticket.requester.id']); // something like 29043265
-  });
-
-  client.invoke('resize', { width: '100%', height: '120px' });
+  client.invoke('resize', { width: '100%', height: '200px' });
 
   client.get('ticket.requester.id').then(
     function(data) {
       var user_id = data['ticket.requester.id'];
-      console.log("PASSO AQUI!!!!!!!!!!!!!");
-      // requestUserInfo(client, user_id);
+      client.metadata().then(metadata => {
+        getUserInfo(client, metadata, user_id);
+      })
     }
   );
-
 });
+
+function showUserInfo(info, admin_url) {
+  // https://pactcoffee.zendesk.com/agent/tickets/361430?zat=true
+  var source = $("#sidebar-template").html();
+  var template = Handlebars.compile(source);
+  info.admin_url = admin_url;
+  var html = template(info);
+  $("#content").html(html);
+}
+
+function getUserInfo(client, metadata, user_id) {
+  var settings = {
+    url: metadata.settings.api_url + '/users/' + user_id,
+    type: 'GET',
+    dataType: 'json',
+  };
+
+  client.request(settings).then(
+    function(data) {
+      showUserInfo(data, metadata.settings.admin_url);
+    },
+    function(response) {
+      $("#content").html("<p>Sorry, we couldn't find a user with this email</p>");
+    }
+  );
+}
 
 /*
 (function() {
