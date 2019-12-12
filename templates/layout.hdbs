@@ -1,9 +1,0 @@
-<header>
-  <span class="logo"></span>
-  <h3>{{author.name}}: {{setting "name"}}</h3>
-</header>
-
-<section data-main></section>
-
-<footer>
-</footer>
