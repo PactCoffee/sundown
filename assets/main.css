@@ -94,7 +94,6 @@ hr {
 }
 .recurrable-bar, .bd {
   overflow:hidden; 
-  overflow:visible;
   font-size: small;
   padding-top: 0.35em;
 }
@@ -116,6 +115,9 @@ hr {
   font-size: small;
 }
 
+p.not-found {
+  color: #ffaa2b;
+}
 
 .cta {
   display: inline-block;
@@ -135,9 +137,4 @@ hr {
   background-color: #ff824f;
   color: white;
   text-decoration: none;
-}
-
-footer {
-  font-size: 10px;
-  padding-top: 20px;
 }
