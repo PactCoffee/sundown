@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script id="sidebar-template" type="text/x-handlebars-template">
+      <h2>
+        <a href="{{admin_url}}/users/{{user.id}}" target="_blank">
+          {{user.first_name}} {{user.last_name}}
+        </a>
+      </h2>
+
+      <dl>
+        <dt>Phone number</dt>
+        <dd>{{user.phone_number}}</dd>
+        <dt>Email</dt>
+        <dd>{{user.email}}</dd>
+        <dt>Balance</dt>
+        <dd>£{{user.balance}}</dd>
+        <dt>Signup voucher</dt>
+        <dd>{{user.signup_voucher_code}}</dd>
+        <dt>Activated on</dt>
+        <dd>{{user.activated_on}}</dd>
+      </dl>
+
+      <hr>
+
+      <span class="actions">
+        <a class="cta" href="{{admin_url}}/user_vouchers/new?user_id={{user.id}}" target="_blank">
+          Add voucher
+        </a>
+
+        <a class="cta" href="{{admin_url}}/orders/new?user_id={{user.id}}" target="_blank">
+          Create adhoc order
+        </a>
+      </span>
+
+      <hr>
+
+      <h3>Addresses</h3>
+      <div class="address">
+        <ul>
+          {{#each user.addresses}}
+          <li>
+            <a href="{{@root.admin_url}}/users/{{@root.user.id}}" target="_blank">
+              {{.}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+
+      <hr>
+
+      <h3>Orders ({{user.orders.length}}):</h3>
+
+      {{#each user.orders}}
+        <div class="panel">
+          <div class="recurrable-bar">
+            <div class="bd">
+              <b>{{address_line_1}}</b>
+              <br>
+              Dispatch on: {{dispatch_on}}
+            </div>
+          </div>
+          <ul class="order-items">
+            {{#each items}}
+              <li class="order-item">{{.}}</li>
+            {{/each}}
+          </ul>
+          <div class="button-group">
+            <a href="{{@root.admin_url}}/orders/{{id}}" target="_blank">
+              View in admin &gt;
+            </a>
+          </div>
+        </div>
+      {{/each}}
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.3.3/dist/handlebars.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+

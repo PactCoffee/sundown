@@ -1,0 +1,140 @@
+.side-box-content, .blue_box_top, .blue_box_bottom, .side-box-with-image, .r_blue {
+  background-color: blue;
+}
+
+body {
+  color: #1d4045;
+}
+
+h1 { font-size: 2em;}
+h2 { font-size: 1.8em;}
+h3 { font-size: 1.25em;}
+
+dl {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  font-size: small;
+}
+
+dd {
+  margin-left: 0.5em;
+  margin-bottom: 0;
+}
+
+a {
+  font-weight: bold;
+  color: #ffaa2b;
+}
+
+a:hover {
+  color: #ff824f;
+  text-decoration: none;
+}
+
+hr {
+  margin: 0.5em;
+}
+
+.orders-list {
+  margin: 0;
+}
+
+.panel {
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
+  border-radius: 8px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+/* order states */
+.created {
+  color: #29ae9b;
+}
+.billed {
+  color: #ff941c;
+}
+.shipped {
+  color: #80b0d3;
+}
+
+
+/*.recurrable-bar{
+  padding: 0.5em;
+  height: 50px;
+}*/
+.address {
+  font-weight: bold;
+  font-size: small;
+}
+.preparation {
+  /*width: 50px;*/
+  /*float: left;*/
+  /*margin: 0 0.4rem;*/
+}
+.order-items {
+  padding-top: 0.35em;
+  padding-bottom: 0.35em;
+  padding-left: 2em;
+  margin: 0;
+  font-size: small;
+}
+.order-item {
+  margin-bottom: 0.1em;
+}
+.order-item:last-child {
+  margin-bottom: 0;
+}
+
+.recurrable-bar {
+  padding: 0.5em;
+  border-bottom: solid 2px #e1e1e1;
+}
+.recurrable-bar, .bd {
+  overflow:hidden; 
+  font-size: small;
+  padding-top: 0.35em;
+}
+
+.button-group {
+  padding: 0.25em 1.5em;
+  text-align: center;
+  border-top: solid 2px #e1e1e1;
+}
+.button-group a {
+  color: #ffaa2b;
+  font-weight: bold;
+  font-size: small;
+}
+
+.button-group a:hover {
+  color: #ff824f;
+  font-weight: bold;
+  font-size: small;
+}
+
+p.not-found {
+  color: #ffaa2b;
+}
+
+.cta {
+  display: inline-block;
+  font-size: small;
+  font-weight: normal;
+  padding: 0.5em 1.25em;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background-color: #ffaa2b;
+  appearance: none;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+}
+.cta:hover {
+  background-color: #ff824f;
+  color: white;
+  text-decoration: none;
+}

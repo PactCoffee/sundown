@@ -1,5 +1,5 @@
 {
-  "name": "Sundown",
+  "name": "PactCoffee Sundown v3",
   "author": {
     "name": "PactCoffee",
     "email": "dev@pactcoffee.com",
@@ -7,24 +7,26 @@
   },
   "defaultLocale": "en",
   "private": true,
-  "location": "ticket_sidebar",
-  "version": "2.2.0",
-  "frameworkVersion": "1.0",
-  "domainWhitelist": [
-    "{{setting 'api_url'}}"
-  ],
+  "location": {
+    "support": {
+      "ticket_sidebar": "assets/index.html"
+    }
+  },
+  "version": "3.0.0",
+  "frameworkVersion": "2.0",
+  "domainWhitelist": ["{{setting.api_url}}"],
   "parameters": [
     {
       "name": "api_url",
       "type": "text",
       "required": true,
-      "default": "http://4a38f0f1.ngrok.com"
+      "default": "https://api.pactcoffee.com/v1/webhooks/zendesk"
     },
     {
       "name": "admin_url",
       "type": "text",
       "required": true,
-      "default": "https://api.pactcoffee.com/admin"
+      "default": "https://api.pactcoffee.com/pact_admin"
     }
   ]
 }
