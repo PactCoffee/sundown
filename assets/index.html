@@ -6,8 +6,9 @@
       https://developer.zendesk.com/apps/docs/developer-guide/setup#using-zendesk-garden
       https://garden.zendesk.com/css-components/bedrock/
       https://garden.zendesk.com/css-components/utilities/typography/
-    -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/@zendeskgarden/css-bedrock@7.0.21,npm/@zendeskgarden/css-utilities@4.3.0">
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet">
   </head>
   <body>
@@ -47,30 +48,30 @@
 
       <hr>
 
-      <h2>Addresses</h2>
-      <ul>
-        {{#each user.addresses}}
-        <li>
-          <a href="{{@root.admin_url}}/users/{{@root.user.id}}" target="_blank">
-            {{.}}
-          </a>
-        </li>
-        {{/each}}
-      </ul>
+      <h3>Addresses</h3>
+      <div class="address">
+        <ul>
+          {{#each user.addresses}}
+          <li>
+            <a href="{{@root.admin_url}}/users/{{@root.user.id}}" target="_blank">
+              {{.}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
 
       <hr>
 
-      <h2>Orders ({{user.orders.length}})</h2>
+      <h3>Orders ({{user.orders.length}}):</h3>
 
       {{#each user.orders}}
         <div class="panel">
           <div class="recurrable-bar">
             <div class="bd">
-              <p>
-                <span class="address">{{address_line_1}}</span>
-                <br>
-                Dispatch on:&nbsp;{{dispatch_on}}
-              </p>
+              <b>{{address_line_1}}</b>
+              <br>
+              Dispatch on: {{dispatch_on}}
             </div>
           </div>
           <ul class="order-items">
