@@ -39,7 +39,7 @@ This information is pulled from Viper API (currently api.pactcoffee.com/v1):
 *_You can find the environment varaible values in Viper's Heroku settings._
 
 **Within Sundown folder**
-* Start the Zendesk App Server: `zat server`
+* Start the Zendesk App Server: `bundle exec zat server`
 * Set the `API_URL` to the ngrok address
 * Set the `ADMIN_URL` to your local rails server address
 
