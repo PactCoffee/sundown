@@ -64,7 +64,7 @@ Refreshing the page will reload the data from the API, refreshing the app using 
 * Add to the change log (below)
 * Run `zat update` to build the app*
 
-*_The current config is set to update the test app. Swap the id to the production app to update the production version._
+*_The current config (see `.zat`) is set to update the test app. Swap the id to the production app to update the production version._
 
 *Production App ID:* 75162
 *Test App ID:* 80833
